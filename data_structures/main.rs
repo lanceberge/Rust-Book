@@ -4,4 +4,6 @@ fn main() {
     let five_hundred = x.0;
 
     let a: [i32, 5] = [10, 2, 5];
+
+    let o1: Option = Some(5);
 }
