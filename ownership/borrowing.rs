@@ -7,21 +7,19 @@ struct Number {
     positive: bool,
 }
 
-#[derive(Clone, Debug)]
+#[derive(Copy, Clone, Debug)]
 struct CopyNumber {
     value: i32,
     positive: bool,
 }
 
-fn main() {}
-
 fn main() {
     let mut vector = vec![Foo {}, Foo {}, Foo {}];
 
-    let last_foo = vector.last();
+    let last_foo = vector.last(); // immutable borrow
     println!("last_foo: {:?}", last_foo);
 
-    vector.pop();
+    // vector.pop(); // mutable borrow
 
     println!("last_foo: {:?}", last_foo);
 
@@ -34,10 +32,11 @@ fn main() {
         value: 44,
         positive: false,
     };
+
     // m is moved
     let m = n;
     // println!("{:?}", n); - error because n is moved to m
 
     let m2 = copy_n; // creates a copy of n
-    println!("2");
+    println!("{:?}", copy_n);
 }

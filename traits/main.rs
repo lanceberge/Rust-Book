@@ -13,6 +13,13 @@ impl Signed for Number {
     }
 }
 
+// Trait receivers
+impl std::clone::Clone for Number {
+    fn clone(&self) -> Self {
+        Self { ..*self }
+    }
+}
+
 trait SignedDefault {
     fn is_negative(self) ->
 }
