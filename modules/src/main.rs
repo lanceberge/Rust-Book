@@ -11,5 +11,6 @@ fn main() {
     module::say_hello();
     subdir_mod::say_hello::say_hello();
     let plant = Asparagus {};
+
     println!("I'm growing {plant:?}!");
 }
