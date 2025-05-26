@@ -7,6 +7,7 @@ struct Number {
     positive: bool,
 }
 
+// Copy creates a bitwise copy when you do assignment
 #[derive(Copy, Clone, Debug)]
 struct CopyNumber {
     value: i32,
